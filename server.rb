@@ -41,7 +41,7 @@ class Connection
             t = Time.now()
             @s << HTML_TYPE
             @s << N
-            @s << "<html><body>Count: #{t}</body></html>" << N
+            @s << "<html><body>#{t}</body></html>" << N
             @s << "--#{BOUND}"
             @s << "--" if count == range.last
             @s << N
