@@ -68,7 +68,7 @@ loop do
       puts("Connection from #{session.addr[2]}")
       c.onConnect()
     rescue => e
-      STDERR.puts("Error #$! #{e}")
+      STDERR.puts("Error #$!")
     end
   end
 end
