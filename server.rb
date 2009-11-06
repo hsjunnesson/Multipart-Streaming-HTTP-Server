@@ -52,6 +52,7 @@ class Connection
 
     @s.close
   end
+
 end
 
 server = TCPServer.open(PORT)
@@ -64,9 +65,10 @@ loop do
   Thread.start do
     begin
       c = Connection.new(session)
+      puts("Connection from #{session.addr[2]}")
       c.onConnect()
     rescue => e
-      puts("Error #$! #{x}")
+      STDERR.puts("Error #$! #{e}")
     end
   end
 end
